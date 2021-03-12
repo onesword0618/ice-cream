@@ -18,7 +18,7 @@ public class Application {
     /**
      * Main.
      * 
-     * @param args
+     * @param args コマンドライン引数
      */
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
