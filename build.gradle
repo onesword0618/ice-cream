@@ -13,15 +13,16 @@ plugins {
 }
 
 def javaVersion = JavaVersion.VERSION_11
-def defaultEncoding = "${encoding}"
-def applicationName = "${applicationName}"
-def domain = "${domain}"
-def applicationPackage = "${applicationPackage}"
-def mainClass = "${mainClass}"
 def releaseVersion = "${releaseVersion}"
+def defaultEncoding = "${encoding}"
+def domain = "${domain}"
+def applicationName = "${applicationName}"
+def archiveClassifier = "${archiveClassifier}"
+def archiveExtension = "${archiveExtension}"
 
 java {
      build.mustRunAfter clean
+
      tasks.withType(JavaCompile) {
         sourceCompatibility = javaVersion
         targetCompatibility = javaVersion
@@ -30,11 +31,24 @@ java {
         options.encoding = defaultEncoding
         options.listFiles = true
     }
-    
+
     tasks.withType(Javadoc) {
         options.charSet = defaultEncoding
         options.encoding = defaultEncoding
     }
+
+    tasks.withType(Jar) {
+        enabled = false
+    }
+}
+
+bootJar {
+    enabled = true
+    classifier = archiveClassifier
+    archiveBaseName = domain
+    archiveAppendix = applicationName
+    archiveVersion = releaseVersion
+    archiveExtension = archiveExtension
 }
 
 repositories {
