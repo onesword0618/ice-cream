@@ -9,6 +9,7 @@ plugins {
     id 'io.spring.dependency-management' version "${springDependencyManagement}"
     id 'eclipse'
     id 'idea'
+    id 'project-report'
 }
 
 def javaVersion = JavaVersion.VERSION_11
