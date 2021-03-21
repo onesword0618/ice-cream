@@ -15,9 +15,25 @@
 
 ## Usage
 
-詳細なコマンドは以下の scripts のセクションをご覧ください。
+### Use Modeling Tool
 
-ここに記載予定
+- docker service plantuml start
+
+```bash
+docker-compose up plantuml
+```
+
+- localhost access
+
+```bash
+http://localhost:8001/ # .env key UML=8001
+```
+
+- docker kill
+
+```bash
+docker-compose down
+```
 
 ## License
 
