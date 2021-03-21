@@ -7,3 +7,9 @@ services:
     ports:
       - ${UML}:8080
     restart: always
+  # api tool
+  swagger-editor:
+    image: swaggerapi/swagger-editor
+    container_name: "swagger-editor"
+    ports:
+      - ${EDITOR}:8080

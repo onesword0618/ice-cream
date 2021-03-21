@@ -29,6 +29,20 @@ docker-compose up plantuml
 http://localhost:8001/ # .env key UML=8001
 ```
 
+### Use Api Tool
+
+- docker service swagger-editor start
+
+```bash
+docker-compose up swagger-editor
+```
+
+- localhost access
+
+```bash
+http://localhost:8002/ # .env key EDITOR=8002
+```
+
 - docker kill
 
 ```bash
