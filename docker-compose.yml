@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  # modeling tool
+  plantuml:
+    image: plantuml/plantuml-server
+    container_name: "plantuml"
+    ports:
+      - ${UML}:8080
+    restart: always
