@@ -13,3 +13,12 @@ services:
     container_name: "swagger-editor"
     ports:
       - ${EDITOR}:8080
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: "swagger-ui"
+    ports:
+      - ${UI}:8080
+    volumes:
+      - ./docs/api/openapi.yml:/openapi.yml
+    environment:
+      SWAGGER_JSON: /openapi.yml
