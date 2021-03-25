@@ -43,6 +43,18 @@ docker-compose up swagger-editor
 http://localhost:8002/ # .env key EDITOR=8002
 ```
 
+- docker service swagger-ui start
+
+```bash
+docker-compose up swagger-ui
+```
+
+- localhost access
+
+```bash
+http://localhost:8003/ # .env key UI=8003
+```
+
 - docker kill
 
 ```bash
